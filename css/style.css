@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*{
+    font-family: 'Poppins',cursive;
+}
+body{
+    color: azure;
+    width: 100%;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    /* padding-top: -30; */
+}
+
+.botones{
+    padding: 9px;
+    border-radius: 80px;
+    background-color: transparent;
+    border: none;
+}
+
+.botones a{
+    background-color: #0a2be9;
+    padding: 9px;
+    border-radius: 80px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+
+}
+
+.botones a:focus{
+    background-color: rgb(50, 194, 194);
+}
+
+.greetings{
+    font-size: 7rem;
+    font-weight: 900;
+    display: inline-block;
+}
+
+.greetings > span {
+    opacity: 0;
+    animation: glow 1s ease-in-out forwards;
+    display: inline-block;
+}
+
+@keyframes glow {
+    0% {
+        color: #111;
+        text-shadow: none;
+        opacity: 0;
+    }
+    50% {
+        color: #39c6d6;
+        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+        opacity: 1;
+    }
+    100% {
+        color: #fff;
+        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+        opacity: 1;
+    }
+}
+
+/* Retrasos progresivos por letra */
+.greetings > span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.greetings > span:nth-child(2) {
+    animation-delay: 1s; /* Inicia después de 1 segundo */
+}
+
+.greetings > span:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.greetings > span:nth-child(4) {
+    animation-delay: 3s;
+}
+
+.greetings:nth-of-type(2) > span:nth-child(1) {
+    animation-delay: 4s; /* Después de "Hola" */
+}
+
+.greetings:nth-of-type(2) > span:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.greetings:nth-of-type(2) > span:nth-child(3) {
+    animation-delay: 6s;
+}
+
+.greetings:nth-of-type(2) > span:nth-child(4) {
+    animation-delay: 7s;
+}
+
+.greetings:nth-of-type(2) > span:nth-child(5) {
+    animation-delay: 8s;
+}
+
+.greetings:nth-of-type(2) > span:nth-child(6) {
+    animation-delay: 9s;
+}
+
+.greetings:nth-of-type(2) > span:nth-child(7) {
+    animation-delay: 10s;
+}
+
+.greetings:nth-of-type(2) > span:nth-child(8) {
+    animation-delay: 11s;
+}
+
+/* Ciclo completo */
+.greetings {
+    animation: reset 14s linear infinite; /* Animación infinita de la secuencia */
+}
+
+/* Ciclo que reinicia la animación de las letras */
+@keyframes reset {
+    0%, 85% {
+        opacity: 1; /* Las letras están visibles */
+    }
+    100% {
+        opacity: 0; /* Se apagan todas las letras al final */
+    }
+}
+
+.description{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.button a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #111;
+}
+
+@media screen and (max-width:574px){
+    .greetings{
+        display: block;
+        font-size: 4rem;
+        font-weight: 800;
+        text-align: center;
+    }
+    .description{
+        font-size: 2rem;
+    }
+    
+    .button a{
+        font-size: 1rem;
+    }
+}
